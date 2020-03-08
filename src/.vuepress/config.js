@@ -1,7 +1,7 @@
 module.exports = {
   title: 'forEach(i)',
   description: "Dev's Notes",
-  dest: 'docs',
+  dest: 'dist',
   
   themeConfig: {
     nav: [
