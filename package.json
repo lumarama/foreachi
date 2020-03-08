@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
-    "commit-all": "git add -A && git commit -m 'new deployment'",
-    "push-origin": "git push origin",
-    "deploy-gh": "git subtree push --prefix dist origin gh-pages",
-    "deploy": "npm run build && npm run commit-all && npm run push-origin && npm run deploy-gh"
+    "push-master": "git add -A && git commit -m 'new deployment' && git push",
+    "push-gh-pages": "cd dist && git add -A && commit -m 'new content' && git push",
+    "deploy": "npm run build && npm run push-master && npm run push-gh-pages"
   },
   "author": "Illya Sikeryn",
   "license": "ISC",
