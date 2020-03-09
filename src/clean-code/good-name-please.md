@@ -1,6 +1,6 @@
-# Good name, please!
+# Good Name, Please!
 
-## Reasonably short
+## Reasonably Short
 
 Take a look at the following class definition:
 
@@ -34,7 +34,7 @@ Do you see the problem now? Word "user" is repeated way too frequently. Putting 
 
 Much better! Isn't it?
 
-## Scope and context
+## Scope and Context
 
 When naming your classes, functions or variables you should always think about the scope, in which they are going to be used. I'm talking about any scope: module, package, namespace, file, class, function, code block...
 
@@ -72,7 +72,7 @@ In this context it isn't quite clear what "taken" means. Word "taken" only makes
 
 As you can see "description" works pretty well in all contexts.
 
-## Too verbose
+## Too Verbose
 
 So, single-letter identifiers are bad. Right? While this is true in general. But there are exceptions. I.e. there is nothing wrong about the following code:
 

@@ -12,6 +12,10 @@ module.exports = {
         '',
         'good-name-please'
       ],
+      '/flutter/': [
+        '',
+        'provider-cheatsheet'
+      ],
       '/android/': [
         '',
         'androidx-proguard'
@@ -19,6 +23,7 @@ module.exports = {
       '/': [
         '',
         '/clean-code/',
+        '/flutter/',
         '/android/'
       ]
     }
