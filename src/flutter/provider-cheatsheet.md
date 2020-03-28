@@ -95,4 +95,4 @@ class SomeOtherWidget extends StatelessWidget {
 }
 ```
 
-When model changes build() method of every widget that uses the model is invoked to re-build affected widgets.
+When model changes build() method of every widget that uses the model is invoked to re-build affected widgets. 
