@@ -29,12 +29,13 @@ module.exports = {
     }
   },
 
-  plugins: [
-    [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'UA-17026194-4'
-      }
-    ]
-  ]
+
+  head: [
+  ['script', {'async src': 'https://www.googletagmanager.com/gtag/js?id=UA-17026194-4'}, ''],
+  ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-17026194-4');
+  `]]
 }
