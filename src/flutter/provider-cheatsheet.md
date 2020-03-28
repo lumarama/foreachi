@@ -1,4 +1,4 @@
-# Provider Cheatsheet
+# Provider Cheat Sheet
 
 Provider library is a very popular way to manage states of your UI screens in Flutter. This is a very quick guide how to use it.
 
@@ -34,7 +34,7 @@ class MyModel with ChangeNotifier {
 }
 ```
 
-Of course your model will most likely have more complex state with multiple variables and methods. While in all cases notifyListeners() must be invoked when model state changes. This will eventually update all UI widgets that uses the model.
+Of course your model can have more complex state with multiple variables and methods. In any case notifyListeners() must be invoked when model changes to update all UI widgets that use it.
 
 ## Register Model
 
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
 
 ## Use Model in Widgets
 
-Now you can get access to registered models in any widget of your application. Some widgets can update model state, others consume it. Also the same widget can update and consume the model state at the same time.
+Now you can use registered models in any widget of your application. Some widgets can update model, others read it. A widget can also update and read the model at the same time.
 
 ```dart
 // widget that updates the model state
@@ -95,3 +95,4 @@ class SomeOtherWidget extends StatelessWidget {
 }
 ```
 
+When model changes build() method of every widget that uses the model is invoked to re-build affected widgets.
