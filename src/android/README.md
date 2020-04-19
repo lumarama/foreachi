@@ -1,3 +1,3 @@
 # Android
 
-My findings using Android SDK and Flutter.
+My findings using Android SDK.

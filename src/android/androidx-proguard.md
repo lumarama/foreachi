@@ -1,3 +1,7 @@
+---
+title: Proguard rules for AndroidX
+permalink: /android/androidx-proguard
+---
 # Proguard rules for AndroidX
 
 If you recently migrated your Android app from Support Library to [AndroidX](https://developer.android.com/jetpack/androidx/), you must update your **proguard-rules.pro** file. Overwise you're going to get **ClassNotFoundException** when running release build of your app. 

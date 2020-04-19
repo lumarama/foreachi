@@ -1,6 +1,16 @@
-# Provider Cheat Sheet
+---
+title: Provider Example
+permalink: /flutter/provider-cheatsheet
+---
+# Flutter UI State Management - Provider Example
 
-Provider library is a very popular way to manage states of your UI screens in Flutter. This is a very quick guide how to use it.
+There are several UI state management approaches in Flutter:
+
+ - StatefulWidget
+ - BLoC design pattern
+ - Provider library
+
+This article is a very quick guide how to use [Provider](https://pub.dev/packages/provider).
 
 ## Update pubspec.yaml
 

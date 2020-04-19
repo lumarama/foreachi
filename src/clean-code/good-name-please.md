@@ -1,3 +1,7 @@
+---
+title: Good Name, Please!
+permalink: /clean-code/good-name-please
+---
 # Good Name, Please!
 
 ## Reasonably Short
