@@ -33,7 +33,7 @@ functions:
 
 We configured the same Lambda function to handle connect, disconnect, and default (message receiving) routes. Note **handler: src/handler.default** above: **src/handler** is the filename where the Lambda function is defined, and **default** is the name of the function itself.
 
-In the example we simply echo back the message we received via websocket: **event.body** contains the message, **event.requestContext.connectionId** - current connection id. You will most likely want to store all active connection ids to database (i.e. DynamoDB), so you can forward messages between the connected clients, instead of simply echoing it back to the same connection.
+In the example we simply echo back the message we received via websocket: **event.body** contains the message, **event.requestContext.connectionId** - current connection id.
 
 src/handler.js:
 
@@ -79,3 +79,5 @@ exports.default = async (event, context) => {
   return response(200, "Ok.");
 }
 ```
+
+You will most likely want to store all active connection ids to database (i.e. DynamoDB), so you can forward messages between the connected clients, instead of simply echoing it back to the same connection.
