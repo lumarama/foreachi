@@ -12,6 +12,10 @@ module.exports = {
         '',
         'good-name-please'
       ],
+      '/aws/': [
+        '',
+        'aws-dynamodb-javascript'
+      ],
       '/flutter/': [
         '',
         'provider-cheatsheet'
@@ -23,6 +27,7 @@ module.exports = {
       '/': [
         '',
         '/clean-code/',
+        '/aws/',
         '/flutter/',
         '/android/'
       ]

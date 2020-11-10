@@ -4,13 +4,7 @@ permalink: /flutter/provider-cheatsheet
 ---
 # Flutter UI State Management - Provider Example
 
-There are several UI state management approaches in Flutter:
-
- - StatefulWidget
- - BLoC design pattern
- - Provider library
-
-This article is a very quick guide how to use [Provider](https://pub.dev/packages/provider).
+This article is a quick guide how to use [Provider](https://pub.dev/packages/provider) for UI state management in Flutter.
 
 ## Update pubspec.yaml
 
@@ -44,7 +38,7 @@ class MyModel with ChangeNotifier {
 }
 ```
 
-Of course your model can have more complex state with multiple variables and methods. In any case notifyListeners() must be invoked when model changes to update all UI widgets that use it.
+Of course your model may have more state variables and methods - notifyListeners() must be invoked when model variables change to notify all listeners.
 
 ## Register Model
 
@@ -73,9 +67,9 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-## Use Model in Widgets
+## Update or Listen to Model Changes in Widgets
 
-Now you can use registered models in any widget of your application. Some widgets can update model, others read it. A widget can also update and read the model at the same time.
+Now you can use the model in any widget. Some widgets can update the model, others read it. A widget can update and read the model at the same time.
 
 ```dart
 // widget that updates the model state
@@ -105,4 +99,4 @@ class SomeOtherWidget extends StatelessWidget {
 }
 ```
 
-When model changes build() method of every widget that uses the model is invoked to re-build affected widgets. 
+Now when state of the model changes from anywere in your application build() method of all widgets that use the model will be invoked to rebuild them. Just make sure you don't update the model in the build() method itself. This will create a disaster - infinite loop of model changes and widget updates. I.e. you can see that I don't call model.setState() in the build() method, but in the onPressed() button handler.
