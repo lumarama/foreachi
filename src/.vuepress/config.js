@@ -1,6 +1,6 @@
 module.exports = {
   title: 'foreach i',
-  description: "Dev's Notes",
+  description: "Code snippets for everyone",
   dest: 'dist',
   
   themeConfig: {
