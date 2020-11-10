@@ -14,7 +14,7 @@ module.exports = {
       ],
       '/aws/': [
         '',
-        'aws-dynamodb-javascript'
+        'dynamodb-javascript'
       ],
       '/flutter/': [
         '',
