@@ -4,7 +4,7 @@ permalink: /aws/serverless-websockets
 ---
 # Using Lambda and DynamoDB to Handle Websocket Connections
 
-## Lambda Function as Websocket Handler
+## Lambda as Websocket Handler
 
 AWS provides ability to handle websocket connections using serverless services only: Lambda functions and API Gateway. Most likely you will also need DynamoDB, though this isn't strictly required.
 
