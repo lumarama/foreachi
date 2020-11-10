@@ -7,7 +7,7 @@
     "dev": "vuepress dev src",
     "build": "vuepress build src",
     "push-master": "git add -A && git commit -m 'new deployment' && git push",
-    "push-gh": "cd dist && cp -a ../dist-temp/. . && git add -A && git commit -m 'new content' && git push",
+    "push-gh": "cd dist && cp -R ../dist-temp/. . && git add -A && git commit -m 'new content' && git push",
     "deploy": "npm run build && npm run push-master && npm run push-gh"
   },
   "author": "Illya Sikeryn",
