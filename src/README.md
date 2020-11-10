@@ -4,10 +4,10 @@ I've noticed that often a very quick source code example is exactly what you nee
 
 Hope somebody will find them useful too.
 
-You can also check some of my projects:
+Check some of my projects:
 
  - [PhotoCurves](https://play.google.com/store/apps/details?id=com.foreachi.photocurves) - Color grading Android app with focus on RGB and HSL curves.
  - [Perfect Cast IPTV](https://play.google.com/store/apps/details?id=com.niklabs.ppremote) - Android app for IPTV.
  - [Tentacle Wars](https://play.google.com/store/apps/details?id=com.fdgentertainment.tentaclewars.gp.free) - Android strategy game, also for [iOS](https://apps.apple.com/us/app/tentacle-wars/id1065786902)
 
-You can reach me via Instagram: [elius_space](https://www.instagram.com/elius_space/)
+And you can reach me via Instagram: [elius_space](https://www.instagram.com/elius_space/)
