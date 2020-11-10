@@ -14,7 +14,7 @@
   </script>
     <meta name="description" content="Code snippets for developers">
     
-    <link rel="preload" href="/assets/css/0.styles.16ce77e3.css" as="style"><link rel="preload" href="/assets/js/app.8b7465c8.js" as="script"><link rel="preload" href="/assets/js/2.fb7a5d33.js" as="script"><link rel="preload" href="/assets/js/12.48acf4d1.js" as="script"><link rel="prefetch" href="/assets/js/10.15c33ada.js"><link rel="prefetch" href="/assets/js/11.ae7e092c.js"><link rel="prefetch" href="/assets/js/13.7f8ee34f.js"><link rel="prefetch" href="/assets/js/14.0772c87b.js"><link rel="prefetch" href="/assets/js/15.f77fb392.js"><link rel="prefetch" href="/assets/js/16.30c87d6a.js"><link rel="prefetch" href="/assets/js/3.0277475e.js"><link rel="prefetch" href="/assets/js/4.d6949b90.js"><link rel="prefetch" href="/assets/js/5.eefddad5.js"><link rel="prefetch" href="/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/assets/js/7.893a4fc8.js"><link rel="prefetch" href="/assets/js/8.6a3fb030.js"><link rel="prefetch" href="/assets/js/9.47a0b92e.js">
+    <link rel="preload" href="/assets/css/0.styles.16ce77e3.css" as="style"><link rel="preload" href="/assets/js/app.515e395b.js" as="script"><link rel="preload" href="/assets/js/2.fb7a5d33.js" as="script"><link rel="preload" href="/assets/js/12.3de7d061.js" as="script"><link rel="prefetch" href="/assets/js/10.15c33ada.js"><link rel="prefetch" href="/assets/js/11.c61ee344.js"><link rel="prefetch" href="/assets/js/13.41cc27f2.js"><link rel="prefetch" href="/assets/js/14.77ccbc03.js"><link rel="prefetch" href="/assets/js/15.f77fb392.js"><link rel="prefetch" href="/assets/js/16.afc3daa5.js"><link rel="prefetch" href="/assets/js/3.0277475e.js"><link rel="prefetch" href="/assets/js/4.d6949b90.js"><link rel="prefetch" href="/assets/js/5.eefddad5.js"><link rel="prefetch" href="/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/assets/js/7.4d2ba386.js"><link rel="prefetch" href="/assets/js/8.6ad0c1cd.js"><link rel="prefetch" href="/assets/js/9.f558fbcb.js">
     <link rel="stylesheet" href="/assets/css/0.styles.16ce77e3.css">
   </head>
   <body>
@@ -40,7 +40,7 @@
           <span class="token key atrule">route</span><span class="token punctuation">:</span> $disconnect
       <span class="token punctuation">-</span> <span class="token key atrule">websocket</span><span class="token punctuation">:</span>
           <span class="token key atrule">route</span><span class="token punctuation">:</span> $default
-</code></pre></div><p>We configured the same Lambda function to handle connect, disconnect, and default (message receiving) routes. Note <strong>handler: src/handler.default</strong> above: <strong>src/handler</strong> is the filename where the Lambda function is defined, and <strong>default</strong> is the name of the function itself.</p> <p>In the example we simply echo back the message we received via websocket: <strong>event.body</strong> contains the message, <strong>event.requestContext.connectionId</strong> - current connection id. You will most likely want to store all active connection ids to database (i.e. DynamoDB), so you can forward messages between the connected clients, instead of simply echoing it back to the same connection.</p> <p>src/handler.js:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+</code></pre></div><p>We configured the same Lambda function to handle connect, disconnect, and default (message receiving) routes. Note <strong>handler: src/handler.default</strong> above: <strong>src/handler</strong> is the filename where the Lambda function is defined, and <strong>default</strong> is the name of the function itself.</p> <p>In the example we simply echo back the message we received via websocket: <strong>event.body</strong> contains the message, <strong>event.requestContext.connectionId</strong> - current connection id.</p> <p>src/handler.js:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">response</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">code<span class="token punctuation">,</span> body</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">{</span> 
@@ -80,11 +80,11 @@ exports<span class="token punctuation">.</span><span class="token function-varia
   <span class="token comment">// Otherwise, API Gateway will return a 500 to the client.</span>
   <span class="token keyword">return</span> <span class="token function">response</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token string">&quot;Ok.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div><p>You will most likely want to store all active connection ids to database (i.e. DynamoDB), so you can forward messages between the connected clients, instead of simply echoing it back to the same connection.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/aws/dynamodb-javascript/" class="prev">
         DynamoDB with JavaScript
       </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.8b7465c8.js" defer></script><script src="/assets/js/2.fb7a5d33.js" defer></script><script src="/assets/js/12.48acf4d1.js" defer></script>
+    <script src="/assets/js/app.515e395b.js" defer></script><script src="/assets/js/2.fb7a5d33.js" defer></script><script src="/assets/js/12.3de7d061.js" defer></script>
   </body>
 </html>
