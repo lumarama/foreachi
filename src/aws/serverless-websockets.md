@@ -33,7 +33,7 @@ functions:
 
 We configured the same Lambda function to handle connect, disconnect, and default (message receiving) routes. Note **handler: src/handler.default** above: **src/handler** is the filename where the Lambda function is defined, and **default** is the name of the function itself.
 
-In the example we simply echo back the message we received via websocket: **event.body** contains the message, **event.requestContext.connectionId** - current connection id.
+In the example we simply echo back the message we receive via websocket: **event.body** contains the message, **event.requestContext.connectionId** - current connection id.
 
 src/handler.js:
 
