@@ -1,4 +1,4 @@
-# Using AWS DynamoDB with JavaScript
+# AWS DynamoDB with JavaScript
 
 The following are examples of using CosmosDB from a Lambda function.
 
