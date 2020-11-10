@@ -2,11 +2,15 @@
 title: Serverless Websockets
 permalink: /aws/serverless-websockets
 ---
-# Using Serverless Framework to Handle Websocket connections
+# Using AWS Lambda to handle websocket connections
 
-In this example we configure the same Lambda function to handle connect, disconnect, and default routes.
+AWS provides ability to handle websocket connections using serverless services only: Lambda, API Gateway. Most likely you will also need DynamoDB as well, though this isn't strictly required.
 
-serverless.yml:
+In this example we use [Serverless Framework](https://www.serverless.com/) to provision all AWS resourses, which is a much easier way than using AWS CloudForwation templates or configuring them manually via web UI. Under the hood serverless generates AWS CloudFormation templates.
+
+We configure the same Lambda function to handle connect, disconnect, and default routes. 
+
+Your serverless.yml should look as follows:
 
 ```yaml
 service: backend
