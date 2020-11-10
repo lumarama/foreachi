@@ -6,5 +6,7 @@ Hope somebody will find them useful too.
 
 You can also check some of my projects:
 
- - [PhotoCurves](https://play.google.com/store/apps/details?id=com.foreachi.photocurves) - Color grading app with focus on RGB and HSL curves.
- - [Perfect Cast IPTV](https://play.google.com/store/apps/details?id=com.niklabs.ppremote) - Watch IPTV playlists.
+ - [PhotoCurves](https://play.google.com/store/apps/details?id=com.foreachi.photocurves) - Color grading Android app with focus on RGB and HSL curves.
+ - [Perfect Cast IPTV](https://play.google.com/store/apps/details?id=com.niklabs.ppremote) - Android app for IPTV.
+ - [Tentacle Wars](https://play.google.com/store/apps/details?id=com.fdgentertainment.tentaclewars.gp.free) - Android strategy game, also for [iOS](https://apps.apple.com/us/app/tentacle-wars/id1065786902)
+
