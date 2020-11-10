@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'forEach(i)',
+  title: 'forEach i',
   description: "Dev's Notes",
   dest: 'dist',
   

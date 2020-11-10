@@ -1,4 +1,4 @@
-# AWS DynamoDB with JavaScript
+# DynamoDB using JavaScript
 
 The following are examples of using CosmosDB from a Lambda function.
 
@@ -43,7 +43,7 @@ const deleteConnection = async (connectionId) => {
 };
 ```
 
-You generally don't want to use scan command for production, because it extremely inefficient and will scan your entire database.
+Get all items. You generally don't want to use the following scan command for production, because it extremely inefficient and will scan your entire database.
 You can probably only use it if you 100% sure that your database is going to be very small.
 
 ```js
