@@ -2,7 +2,7 @@
 title: Serverless Websockets
 permalink: /aws/serverless-websockets
 ---
-# Using Lambda and DynamoDB to Handle Websocket Connections
+# Using AWS Lambda and DynamoDB to Handle Websocket Connections
 
 ## Lambda as Websocket Handler
 
