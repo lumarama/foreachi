@@ -4,9 +4,9 @@ permalink: /aws/serverless-websockets
 ---
 # Using AWS Lambda to Handle Websocket Connections
 
-AWS provides ability to handle websocket connections using serverless services only: Lambda, API Gateway. Most likely you will also need DynamoDB, though this isn't strictly required.
+AWS provides ability to handle websocket connections using serverless services only: Lambda functions and API Gateway. Most likely you will also need DynamoDB, though this isn't strictly required.
 
-In this example we use [Serverless Framework](https://www.serverless.com/) to build a very simple app that echoes back all the messages it receives via websocket.  Serverless framework provides a much easier way to provision cloud services than AWS CloudForwation templates or configuring them manually via AWS Web UI. *NOTE: under the hood serverless generates AWS CloudFormation templates.*
+This example shows [Serverless Framework](https://www.serverless.com/) configuration file to provision required AWS services, and JavaScript Lambda function that handles websocket connections.
 
 Your serverless.yml should look as follows:
 
@@ -33,7 +33,7 @@ functions:
 
 We configured the same Lambda function to handle connect, disconnect, and default (message receiving) routes. Note **handler: src/handler.default** above: **src/handler** is the filename where the Lambda function is defined, and **default** is the name of the function itself.
 
-In the example we simply echo back the message we receive via websocket: **event.body** contains the message, **event.requestContext.connectionId** - current connection id.
+In the example we echo back the message we receive via websocket: **event.body** contains the message, **event.requestContext.connectionId** - current connection id.
 
 src/handler.js:
 
