@@ -2,9 +2,9 @@
 title: Serverless Websockets
 permalink: /aws/serverless-websockets
 ---
-# Using AWS Lambda to Handle Websocket Connections
+# Using Lambda and DynamoDB to Handle Websocket Connections
 
-## Configuring Lambda Function
+## Lambda Function as Websocket Handler
 
 AWS provides ability to handle websocket connections using serverless services only: Lambda functions and API Gateway. Most likely you will also need DynamoDB, though this isn't strictly required.
 
@@ -82,7 +82,7 @@ exports.default = async (event, context) => {
 }
 ```
 
-## Configuring DynamoDB
+## DynamoDB for ConnectionIds
 
 You will most likely want to store all active connection ids to database (i.e. DynamoDB), so you can forward messages between the connected clients, instead of simply echoing it back to the same connection. 
 
