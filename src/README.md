@@ -6,5 +6,5 @@ Hope somebody will find them useful too.
 
 You can also check some of my apps:
 
- - [PhotoCurves](https://play.google.com/store/apps/details?id=com.foreachi.photocurves)
- - [Perfect Cast IPTV](https://play.google.com/store/apps/details?id=com.niklabs.ppremote)
+ - [PhotoCurves](https://play.google.com/store/apps/details?id=com.foreachi.photocurves) - Color grading app with focus on RGB and HSL curves.
+ - [Perfect Cast IPTV](https://play.google.com/store/apps/details?id=com.niklabs.ppremote) - To watch IPTV playlists.
