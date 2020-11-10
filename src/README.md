@@ -1,3 +1,3 @@
 # Home
 
-There must be a home page of some kind. So here it is! :)
+I've noticed that often I need a very quick code example to move forward with a project. So I'm posting those here, hope somebody will also find some of them useful.
