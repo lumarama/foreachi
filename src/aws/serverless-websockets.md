@@ -229,6 +229,8 @@ exports.default = async (event, context) => {
 }
 ```
 
+It is always a good idea to create a separate module to handle database.
+
 **src/db/connections.js**:
 
 ```js
