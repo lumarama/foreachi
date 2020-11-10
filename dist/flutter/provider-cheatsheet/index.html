@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Provider Example | forEach(i)</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17026194-4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-17026194-4');
+  </script>
+    <meta name="description" content="Dev's Notes">
+    
+    <link rel="preload" href="/assets/css/0.styles.90e56d83.css" as="style"><link rel="preload" href="/assets/js/app.18959aae.js" as="script"><link rel="preload" href="/assets/js/2.fb7a5d33.js" as="script"><link rel="preload" href="/assets/js/15.a74add1a.js" as="script"><link rel="prefetch" href="/assets/js/10.83276b85.js"><link rel="prefetch" href="/assets/js/11.d92a34be.js"><link rel="prefetch" href="/assets/js/12.cae4587c.js"><link rel="prefetch" href="/assets/js/13.094658e2.js"><link rel="prefetch" href="/assets/js/14.fe103028.js"><link rel="prefetch" href="/assets/js/3.9f61cab6.js"><link rel="prefetch" href="/assets/js/4.d6949b90.js"><link rel="prefetch" href="/assets/js/5.973b2db8.js"><link rel="prefetch" href="/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/assets/js/7.79f31c35.js"><link rel="prefetch" href="/assets/js/8.6ad0c1cd.js"><link rel="prefetch" href="/assets/js/9.f558fbcb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.90e56d83.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">forEach(i)</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/flutter/" aria-current="page" class="sidebar-link">Flutter SDK</a></li><li><a href="/flutter/provider-cheatsheet/" aria-current="page" class="active sidebar-link">Provider Example</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flutter/provider-cheatsheet/#update-pubspec-yaml" class="sidebar-link">Update pubspec.yaml</a></li><li class="sidebar-sub-header"><a href="/flutter/provider-cheatsheet/#create-model" class="sidebar-link">Create Model</a></li><li class="sidebar-sub-header"><a href="/flutter/provider-cheatsheet/#register-model" class="sidebar-link">Register Model</a></li><li class="sidebar-sub-header"><a href="/flutter/provider-cheatsheet/#update-or-listen-to-model-changes-in-widgets" class="sidebar-link">Update or Listen to Model Changes in Widgets</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="flutter-ui-state-management-provider-example"><a href="#flutter-ui-state-management-provider-example" class="header-anchor">#</a> Flutter UI State Management - Provider Example</h1> <p>This article is a quick guide how to use <a href="https://pub.dev/packages/provider" target="_blank" rel="noopener noreferrer">Provider<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> for UI state management in Flutter.</p> <h2 id="update-pubspec-yaml"><a href="#update-pubspec-yaml" class="header-anchor">#</a> Update pubspec.yaml</h2> <p>Add provider package dependency to the pubspec.yaml:</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+  <span class="token key atrule">flutter</span><span class="token punctuation">:</span>
+    <span class="token key atrule">sdk</span><span class="token punctuation">:</span> flutter
+
+  <span class="token key atrule">provider</span><span class="token punctuation">:</span>
+</code></pre></div><h2 id="create-model"><a href="#create-model" class="header-anchor">#</a> Create Model</h2> <p>Create model class that encapsulates state of your UI. The model class should use ChangeNotifier as mixin or extend it. In both cases you get access to notifyListeners() method.</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">import</span> <span class="token string">'package:flutter/foundation.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyModel</span> <span class="token keyword">with</span> ChangeNotifier <span class="token punctuation">{</span>
+
+  int _state<span class="token punctuation">;</span>
+
+  int <span class="token keyword">get</span> state <span class="token operator">=</span><span class="token operator">&gt;</span> _state<span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">setState</span><span class="token punctuation">(</span>int state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _state <span class="token operator">=</span> state<span class="token punctuation">;</span>
+    <span class="token function">notifyListeners</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Of course your model may have more state variables and methods - notifyListeners() must be invoked when model variables change to notify all listeners.</p> <h2 id="register-model"><a href="#register-model" class="header-anchor">#</a> Register Model</h2> <p>Wrap your base application widget into MultiProvider and register your model(s):</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// ...</span>
+<span class="token keyword">import</span> <span class="token string">'package:provider/provider.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">MultiProvider</span><span class="token punctuation">(</span>
+      
+      providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        ChangeNotifierProvider<span class="token operator">&lt;</span>MyModel<span class="token operator">&gt;</span><span class="token punctuation">(</span>create<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">MyModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token comment">// NOTE: you can register multiple models</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+      child<span class="token punctuation">:</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+        home<span class="token punctuation">:</span> <span class="token function">HomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="update-or-listen-to-model-changes-in-widgets"><a href="#update-or-listen-to-model-changes-in-widgets" class="header-anchor">#</a> Update or Listen to Model Changes in Widgets</h2> <p>Now you can use the model in any widget. Some widgets can update the model, others read it. A widget can update and read the model at the same time.</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token comment">// widget that updates the model state</span>
+<span class="token keyword">class</span> <span class="token class-name">SomeWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> model <span class="token operator">=</span> Provider<span class="token punctuation">.</span>of<span class="token operator">&lt;</span>MyModel<span class="token operator">&gt;</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token function">FlatButton</span><span class="token punctuation">(</span>
+      onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        model<span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>state <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Update State&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// widget that consumes model state</span>
+<span class="token keyword">class</span> <span class="token class-name">SomeOtherWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> model <span class="token operator">=</span> Provider<span class="token punctuation">.</span>of<span class="token operator">&lt;</span>MyModel<span class="token operator">&gt;</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;State: $model.state&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Now when state of the model changes from anywere in your application build() method of all widgets that use the model will be invoked to rebuild them. Just make sure you don't update the model in the build() method itself. This will create a disaster - infinite loop of model changes and widget updates. I.e. you can see that I don't call model.setState() in the build() method, but in the onPressed() button handler.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/flutter/" class="prev router-link-active">
+        Flutter SDK
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.18959aae.js" defer></script><script src="/assets/js/2.fb7a5d33.js" defer></script><script src="/assets/js/15.a74add1a.js" defer></script>
+  </body>
+</html>
