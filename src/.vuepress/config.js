@@ -33,6 +33,7 @@ module.exports = {
         '/clean-code/',
         '/aws/',
         '/flutter/',
+        '/git/',
         '/android/'
       ]
     }
