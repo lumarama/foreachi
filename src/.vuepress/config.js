@@ -8,7 +8,10 @@ module.exports = {
       { text: 'Home', link: '/' }
     ],
     sidebar: {
-      '/clean-code/': 'auto',
+      '/clean-code/': [
+        '',
+        'good-name-please'
+      ],
       '/aws/': [
         '',
         'dynamodb-javascript',
