@@ -1,3 +1,3 @@
 # AWS
 
-Code snippets for Amazon Web Services.
+JavaScript code snippets for Amazon Web Services.

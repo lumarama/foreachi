@@ -1,4 +1,3 @@
 # Flutter
 
-Code snippets for [Flutter SDK](https://flutter.dev/).
-
+Code snippets for [Flutter Framework](https://flutter.dev/).
