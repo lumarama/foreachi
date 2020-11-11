@@ -1,5 +1,6 @@
 ---
 title: Git CLI Cheatsheet
+permalink: /devops/git-cli-cheatsheet
 ---
 # Git CLI Cheatsheet
 

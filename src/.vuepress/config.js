@@ -21,8 +21,9 @@ module.exports = {
         '',
         'provider-cheatsheet'
       ],
-      '/git/': [
+      '/devops/': [
         '',
+        'git-cli-cheatsheet',
       ],
       '/android/': [
         '',
@@ -33,7 +34,7 @@ module.exports = {
         '/clean-code/',
         '/aws/',
         '/flutter/',
-        '/git/',
+        '/devops/',
         '/android/'
       ]
     }
