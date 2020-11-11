@@ -1,6 +1,6 @@
 # Home
 
-I've noticed that often a very quick source code example is exactly what you need to move forward with your next-big-thing project. Here I'm posting code snippets that I use on my projects as I may need to reference them in the future again.
+I've noticed that often a very quick source code example is exactly what you need to move forward with your next-big-thing project. Here I'm posting code snippets that I find useful for myself.
 
 Hope somebody will find them useful too.
 
