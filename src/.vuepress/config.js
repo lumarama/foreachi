@@ -21,6 +21,9 @@ module.exports = {
         '',
         'provider-cheatsheet'
       ],
+      '/git/': [
+        '',
+      ],
       '/android/': [
         '',
         'androidx-proguard'
