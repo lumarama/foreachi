@@ -22,7 +22,7 @@ Field names are clean and self-explanatory. Right? But let's take a closer look 
     user.userLastName = "Anderson";
     user.userBirthDate = Date.fromString("March 11, 1962");
 
-Do you see the problem now? Word "user" is repeated way too frequently. Putting prefix "user" in each class member name was not a good idea. It's redundant. It doesn't make the code more readable. Let's fix that:
+Do you see the problem now? Word "user" is repeated way too frequently. Putting prefix "user" in each class member is redundant. It doesn't make the code more readable. Let's fix that:
 
     class User {
         String firstName;
@@ -36,11 +36,11 @@ Do you see the problem now? Word "user" is repeated way too frequently. Putting 
     user.lastName = "Anderson";
     user.birthDate = Date.fromString("March 11, 1962");
 
-Much better! Isn't it?
+Now it's much better! Isn't it?
 
 ## Scope and Context
 
-When naming your classes, functions or variables you should always think about the scope, in which they are going to be used. I'm talking about any scope: module, package, namespace, file, class, function, code block...
+When naming your classes, functions or variables you should always think about the scope, in which they are going to be used. I'm talking about these scopes: module, package, namespace, file, class, function, code block...
 
 Imagine we need a class to describe an action. Each action has action taken details and information about the user who made it. Here it is:
 
@@ -59,7 +59,7 @@ Looks clean. Isn't it? But what if Action class has a method:
         return taken + " - done by " + user;
     }
     
-In this context it isn't quite clear what "taken" means. Word "taken" only makes sense when it is used in conjunction with the object name (as in "action.taken"), but not alone. You need to be creative to fix this issue. A better name would be "description":
+In this context it isn't quite clear what "taken" means. Word "taken" only makes sense when it is used in conjunction with the object name (as in "action.taken"), but not alone. You need to be creative to fix this issue. A better name would probably be "description":
 
     class Action {
         String description;
@@ -74,7 +74,7 @@ In this context it isn't quite clear what "taken" means. Word "taken" only makes
     action.description = "stopped agent Smith";
     action.user = new User("Thomas Anderson");
 
-As you can see "description" works pretty well in all contexts.
+As you can see "description" works pretty well in both contexts. While I admit this was a tricky example.
 
 ## Too Verbose
 
@@ -92,7 +92,7 @@ Giving "i" a better name, such as "index" or, may be even "itemIndex", will only
         ...
     }
 
-Again, the reason "i" is perfectly fine here is because it is used inside the for-loop scope. It is the only loop counter and therefore the purpose of "i" is very clear and widely accepted.
+Again, the reason "i" is perfectly fine here is because it is used inside a very small for-loop scope. It is the only loop counter and therefore the purpose of "i" is very clear and also it's widely accepted in the industry.
 
 Long variable names make long expressions, which are hard to understand. Take a look:
 
@@ -103,9 +103,9 @@ Long variable names make long expressions, which are hard to understand. Take a 
 Probably none of the expressions above is ideal way to calculate distance between two points. But the point here is to demonstrate that long verbose names don't always improve readability.
 
 When single-letter variables are ok:
-- inside small/local scope, such as function body, loop
+- inside small/local scope, such as small function, loop, code block
 - when no external code can access this variable
-- when this is widely accepted variable name for a given domain (i.e. "i" as loop counter)
+- when this is widely accepted variable name for a given domain (i.e. "i" as a loop counter)
 
 ## Conclusion
 
