@@ -1,5 +1,5 @@
 ---
-title: Widget State with Provider
+title: UI State with Provider
 permalink: /flutter/provider-cheatsheet
 ---
 # Flutter UI State Management - Provider Example
